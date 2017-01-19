@@ -37,7 +37,7 @@
         "description":"Riduci le scelte"
       }
     },
-    "windowsOSVersion": {
+    "WindowsOSVersion": {
       "type": "string",
       "defaultValue": "2012-R2-Datacenter",
       "allowedValues": [
