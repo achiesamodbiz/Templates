@@ -3,16 +3,16 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "newStorageAccountName": {
-      "value": "myStorageAccount"
+      "value": "acstore1"
     },
     "adminUsername": {
-      "value": "admin123"
+      "value": "achiesamodbiz"
     },
     "adminPassword": {
-      "value": "ADmin123_!"
+      "value": "Pa$$w0rd.M0d!"
     },
     "dnsNameForPublicIP": {
-      "value": "myDnsName"
+      "value": "ac672435"
     }
   }
 }
