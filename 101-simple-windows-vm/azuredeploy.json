@@ -50,7 +50,7 @@
       }
     },
     "SizeOfDiskInGB": {
-      "type":"string",
+      "type": "string",
       "metadata": {
         "description": "Dimensione di ogni disco in GB"
       }
