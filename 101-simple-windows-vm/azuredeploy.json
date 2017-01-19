@@ -36,7 +36,7 @@
       "metadata": {
         "description":"Riduci le scelte"
       }
-    }
+    },
     "windowsOSVersion": {
       "type": "string",
       "defaultValue": "2012-R2-Datacenter",
@@ -81,7 +81,7 @@
       "type": "Microsoft.Storage/storageAccounts",
       "name": "[parameters('newStorageAccountName')]",
       "apiVersion": "2015-05-01-preview",
-      "location": "[parameters("location")]",
+      "location": "[parameters('location')]",
       "properties": {
         "accountType": "[variables('storageAccountType')]"
       }
@@ -90,7 +90,7 @@
       "apiVersion": "2015-05-01-preview",
       "type": "Microsoft.Network/publicIPAddresses",
       "name": "[variables('publicIPAddressName')]",
-      "location": "[parameters("location")]",
+      "location": "[parameters('location')]",
       "properties": {
         "publicIPAllocationMethod": "[variables('publicIPAddressType')]",
         "dnsSettings": {
@@ -102,7 +102,7 @@
       "apiVersion": "2015-05-01-preview",
       "type": "Microsoft.Network/virtualNetworks",
       "name": "[variables('virtualNetworkName')]",
-      "location": "[parameters("location")]",
+      "location": "[parameters('location')]",
       "properties": {
         "addressSpace": {
           "addressPrefixes": [
@@ -123,7 +123,7 @@
       "apiVersion": "2015-05-01-preview",
       "type": "Microsoft.Network/networkInterfaces",
       "name": "[variables('nicName')]",
-      "location": "[parameters("location")]",
+      "location": "[parameters('location')]",
       "dependsOn": [
         "[concat('Microsoft.Network/publicIPAddresses/', variables('publicIPAddressName'))]",
         "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
@@ -149,7 +149,7 @@
       "apiVersion": "2015-06-15",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[variables('vmName')]",
-      "location": "[parameters("location")]",
+      "location": "[parameters('location')]",
       "dependsOn": [
         "[concat('Microsoft.Storage/storageAccounts/', parameters('newStorageAccountName'))]",
         "[concat('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
